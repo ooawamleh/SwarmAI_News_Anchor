@@ -1,4 +1,3 @@
-```markdown
 # 🛡️ GIL: Multi-Agent Intelligence Swarm (Enterprise Edition)
 
 **Global Intelligence Liaison (GIL)** is a strategic geopolitical intelligence desk powered by a highly orchestrated **Multi-Agent Swarm**. Designed for enterprise-grade performance, GIL dynamically processes ambiguous queries, fetches real-time data, and synthesizes complex intelligence using an **Ephemeral RAG** architecture and **Self-Healing Semantic Caching**.
@@ -50,4 +49,3 @@ The system is deployed at `https://huggingface.co/spaces/Ounaa2003/gil-intellige
 ---
 **Author:** Oun Alawamleh
 *AI Engineer*
-```

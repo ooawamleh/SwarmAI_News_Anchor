@@ -6,21 +6,21 @@
 
 GIL utilizes a **7-Agent Pipeline** built with LangChain (LCEL) to ensure high accuracy and low latency:
 
-1.  **Agent 1: The Clarifier (Time-Aware):** Analyzes intent and auto-corrects queries. [cite_start]It uses **Dynamic Date Injection** to ground relative time (e.g., "last 2 days") into absolute calendar dates[cite: 1, 2].
-2.  [cite_start]**Agent 2: The Expander (Search Strategist):** Generates 3 optimized search variations while maintaining a **Context Anchor** to prevent subject drift[cite: 1, 2].
+1.  **Agent 1: The Clarifier (Time-Aware):** Analyzes intent and auto-corrects queries. It uses **Dynamic Date Injection** to ground relative time (e.g., "last 2 days") into absolute calendar dates.
+2.  **Agent 2: The Expander (Search Strategist):** Generates 3 optimized search variations while maintaining a **Context Anchor** to prevent subject drift.
 3.  **Agent 3: Multi-Source Fetcher:**
-    * [cite_start]*Targeted Search:* Queries verified defense/news domains via SerpAPI[cite: 1, 2].
-    * [cite_start]*URL/API Ingestion:* Dynamically scrapes and parses user-provided links using BeautifulSoup[cite: 1, 2].
-4.  [cite_start]**Agent 4: The Synthesizer:** Resolves contradictions and highlights multimodal evidence (satellite, video)[cite: 1, 2].
-5.  [cite_start]**Agent 5: The Final Responder:** Formats intelligence into a strict **SITREP** or **Strategic Analysis** based on dynamic path routing[cite: 1, 2].
-6.  [cite_start]**Agent 6: Background Cache Manager:** A persistent FAISS store that serves identical requests instantly[cite: 1, 2].
-7.  **The Quality Gate (Self-Healing):** A background process that inspects cached responses. [cite_start]If a response contains "no data found," it is flagged as "poisoned" and bypassed to ensure only high-quality intelligence is served[cite: 1, 2].
+    * *Targeted Search:* Queries verified defense/news domains via SerpAPI.
+    * *URL/API Ingestion:* Dynamically scrapes and parses user-provided links using BeautifulSoup.
+4.  **Agent 4: The Synthesizer:** Resolves contradictions and highlights multimodal evidence (satellite, video).
+5.  **Agent 5: The Final Responder:** Formats intelligence into a strict **SITREP** or **Strategic Analysis** based on dynamic path routing.
+6.  **Agent 6: Background Cache Manager:** A persistent FAISS store that serves identical requests instantly.
+7.  **The Quality Gate (Self-Healing):** A background process that inspects cached responses. If a response contains "no data found," it is flagged as "poisoned" and bypassed to ensure only high-quality intelligence is served.
 
 ## 🚀 Key Enterprise Features
 
-* [cite_start]**Asynchronous Processing:** Final responses are delivered immediately while caching tasks run in the background via FastAPI `BackgroundTasks`[cite: 1, 2].
-* [cite_start]**Model Agnostic (OpenRouter):** Integrated with OpenRouter to allow seamless switching between LLMs (Gemini, Claude, Llama)[cite: 1, 2].
-* [cite_start]**Zero-Hallucination Policy:** The system is instructed to admit lack of data rather than fabricating intelligence[cite: 1, 2].
+* **Asynchronous Processing:** Final responses are delivered immediately while caching tasks run in the background via FastAPI `BackgroundTasks`.
+* **Model Agnostic (OpenRouter):** Integrated with OpenRouter to allow seamless switching between LLMs (Gemini, Claude, Llama).
+* **Zero-Hallucination Policy:** The system is instructed to admit lack of data rather than fabricating intelligence.
 
 ## 🛠️ Tech Stack
 
